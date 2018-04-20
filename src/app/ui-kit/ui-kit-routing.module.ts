@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { GridsComponent } from "./grids/grids.component";
-import { TypographyComponent } from "./typography/typography.component";
-import { HelperClassesComponent } from "./helper-classes/helper-classes.component";
-import { SyntaxHighlighterComponent } from "./syntax-highlighter/syntax-highlighter.component";
-import { TextUtilitiesComponent } from "./text-utilities/text-utilities.component";
+import { GridsComponent } from './grids/grids.component';
+import { TypographyComponent } from './typography/typography.component';
+import { HelperClassesComponent } from './helper-classes/helper-classes.component';
+import { SyntaxHighlighterComponent } from './syntax-highlighter/syntax-highlighter.component';
+import { TextUtilitiesComponent } from './text-utilities/text-utilities.component';
 import { FeatherComponent } from './icons/feather/feather.component';
 import { FontAwesomeComponent } from './icons/font-awesome/font-awesome.component';
 import { SimpleLineComponent } from './icons/simple-line/simple-line.component';
@@ -13,21 +13,21 @@ import { SimpleLineComponent } from './icons/simple-line/simple-line.component';
 const routes: Routes = [
   {
     path: '',
-    children: [     
+    children: [
       {
         path: 'grids',
         component: GridsComponent,
         data: {
           title: 'Grids'
         }
-      },      
+      },
       {
         path: 'typography',
         component: TypographyComponent,
         data: {
           title: 'Typography'
         }
-      },      
+      },
       {
         path: 'textutilities',
         component: TextUtilitiesComponent,
@@ -55,7 +55,7 @@ const routes: Routes = [
         data: {
           title: 'Feather Icons'
         }
-      }, 
+      },
       {
         path: 'font-awesome',
         component: FontAwesomeComponent,
@@ -69,7 +69,7 @@ const routes: Routes = [
         data: {
           title: 'Simple Line'
         }
-      },    
+      },
 
     ]
   }

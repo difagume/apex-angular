@@ -4,20 +4,20 @@ import { Observable } from 'rxjs/Observable';
 
 import { QuillEditorComponent } from 'ngx-quill/src/quill-editor.component';
 
-import { debounceTime} from 'rxjs/operators';
-import { distinctUntilChanged} from 'rxjs/operators';
+import { debounceTime } from 'rxjs/operators';
+import { distinctUntilChanged } from 'rxjs/operators';
 
 // override p with div tag
 import Quill from 'quill';
-const Parchment = Quill.import('parchment');
-let Block = Parchment.query('block');
+// const Parchment = Quill.import('parchment');
+// let Block = Parchment.query('block');
 
-Block.tagName = 'DIV';
+// Block.tagName = 'DIV';
 // or class NewBlock extends Block {}; NewBlock.tagName = 'DIV';
-Quill.register(Block /* or NewBlock */, true);
+// Quill.register(Block /* or NewBlock */, true);
 
 import Counter from './counter';
-Quill.register('modules/counter', Counter)
+// Quill.register('modules/counter', Counter)
 
 @Component({
   selector: 'app-editor',
@@ -26,7 +26,7 @@ Quill.register('modules/counter', Counter)
 })
 export class EditorComponent implements OnInit {
 
-  //declarations
+  // declarations
   title = 'Quill works!';
   hide = false;
   isReadOnly = false;
@@ -47,18 +47,18 @@ export class EditorComponent implements OnInit {
       .debounceTime(400)
       .distinctUntilChanged()
       .subscribe(data => {
-       //your code here
+        // your code here
       });
 
     this.editor
       .onContentChanged.debounceTime(400)
       .distinctUntilChanged()
       .subscribe(data => {
-        //your code here
+        // your code here
       });
   }
 
-  //events starts
+  // events starts
   setFocus($event) {
     $event.focus();
   }
@@ -72,12 +72,12 @@ export class EditorComponent implements OnInit {
   }
 
   logChange($event: any) {
-    //your code here
+    // your code here
   }
 
   logSelection($event: any) {
-    //your code here
+    // your code here
   }
-  //events ends
+  // events ends
 
 }

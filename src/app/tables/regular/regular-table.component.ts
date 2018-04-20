@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
     styleUrls: ['./regular-table.component.scss']
 })
 
-export class RegularTableComponent  {
+export class RegularTableComponent {
 
 }

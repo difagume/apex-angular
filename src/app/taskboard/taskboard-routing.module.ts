@@ -6,11 +6,10 @@ import { TaskboardComponent } from './taskboard.component';
 const routes: Routes = [
   {
     path: '',
-     component: TaskboardComponent,
+    component: TaskboardComponent,
     data: {
       title: 'Taskboard'
     },
-    
   }
 ];
 

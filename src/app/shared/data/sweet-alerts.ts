@@ -1,13 +1,13 @@
-import swal from 'sweetalert2';
+import * as swal from 'sweetalert2';
 
 // Simple Alert
 export function basicAlert() {
-    swal("Here's a message!").catch(swal.noop); // Use ".catch(swal.noop)" for overlay click close error.
+    swal('Here\'s a message!').catch(swal.noop); // Use ".catch(swal.noop)" for overlay click close error.
 }
 
 // Alert with Title
 export function withTitle() {
-    swal("Here's a message!", "It's pretty, isn't it?");
+    swal('Here\'s a message!', 'It\'s pretty, isn\'t it?');
 }
 
 //  HTML Alert
@@ -21,37 +21,37 @@ export function htmlAlert() {
 
 // Question Type Alert
 export function typeQuestion() {
-    swal("Question", "Are You Sure?", "question");
+    swal('Question', 'Are You Sure?', 'question');
 }
 
 // Success Type Alert
 export function typeSuccess() {
-    swal("Good job!", "You clicked the button!", "success");
+    swal('Good job!', 'You clicked the button!', 'success');
 }
 
 // Info Type Alert
 export function typeInfo() {
-    swal("Info!", "You clicked the button!", "info");
+    swal('Info!', 'You clicked the button!', 'info');
 }
 
 // Warning Type Alert
 export function typeWarning() {
-    swal("Warning!", "You clicked the button!", "warning");
+    swal('Warning!', 'You clicked the button!', 'warning');
 }
 
 // Error Type Alert
 export function typeError() {
-    swal("Error!", "You clicked the button!", "error");
+    swal('Error!', 'You clicked the button!', 'error');
 }
 
-// Custom Icon 
+// Custom Icon
 export function customIcon() {
-    swal({ title: "Sweet!", text: "Here's a custom image.", imageUrl: "./assets/img/portrait/avatars/avatar-08.png" });
+    swal({ title: 'Sweet!', text: 'Here\'s a custom image.', imageUrl: './assets/img/portrait/avatars/avatar-08.png' });
 }
 
 // Auto close timer
 export function autoClose() {
-    swal({ title: "Auto close alert!", text: "I will close in 2 seconds.", timer: 2000, showConfirmButton: false });
+    swal({ title: 'Auto close alert!', text: 'I will close in 2 seconds.', timer: 2000, showConfirmButton: false });
 }
 
 // Allow Outside Click
@@ -96,35 +96,35 @@ export function customButton() {
         title: '<i>HTML</i> <u>example</u>',
         type: 'info',
         html:
-        'You can use <b>bold text</b>, ' +
-        '<a href="//github.com">links</a> ' +
-        'and other HTML tags',
+            'You can use <b>bold text</b>, ' +
+            '<a href="//github.com">links</a> ' +
+            'and other HTML tags',
         showCloseButton: true,
         showCancelButton: true,
         confirmButtonText:
-        '<i class="fa fa-thumbs-up"></i> Great!',
+            '<i class="fa fa-thumbs-up"></i> Great!',
         cancelButtonText:
-        '<i class="fa fa-thumbs-down"></i> Opps!'
+            '<i class="fa fa-thumbs-down"></i> Opps!'
     })
 }
 
 // Prompt Function
 export function promptFunction() {
     swal({
-        title: "An input!",
-        text: "Write something interesting:",
-        input: "text",
+        title: 'An input!',
+        text: 'Write something interesting:',
+        input: 'text',
         showCancelButton: true,
         closeOnConfirm: false,
-        animation: "slide-from-top",
-        inputPlaceholder: "Write something"
+        animation: 'slide-from-top',
+        inputPlaceholder: 'Write something'
     }).then(function (inputValue) {
-        if (inputValue === false) return false;
-        if (inputValue === "") {
-            swal.showInputError("You need to write something!");
+        if (inputValue === false) { return false; }
+        if (inputValue === '') {
+            swal.showInputError('You need to write something!');
             return false
         }
-        swal("Nice!", "You wrote: " + inputValue, "success");
+        swal('Nice!', 'You wrote: ' + inputValue, 'success');
     });
 
 }
@@ -133,13 +133,13 @@ export function promptFunction() {
 export function confirmText() {
     swal({
         title: 'Are you sure?',
-        text: "You won't be able to revert this!",
+        text: 'You won\'t be able to revert this!',
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#0CC27E',
         cancelButtonColor: '#FF586B',
         confirmButtonText: 'Text Changed',
-        cancelButtonText: "No, cancel"
+        cancelButtonText: 'No, cancel'
     }).then(function (isConfirm) {
         if (isConfirm) {
             swal(
@@ -155,7 +155,7 @@ export function confirmText() {
 export function confirmCancelButton() {
     swal({
         title: 'Are you sure?',
-        text: "You won't be able to revert this!",
+        text: 'You won\'t be able to revert this!',
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#0CC27E',
@@ -180,41 +180,41 @@ export function confirmCancelButton() {
                 'error'
             )
         }
-    })    
+    })
 }
 
 // Chaining modals / Steps
 export function steps() {
     swal.setDefaults({
-      confirmButtonText: 'Next &rarr;',
-      showCancelButton: true,
-      cancelButtonColor: '#FF586B',
-      animation: false
+        confirmButtonText: 'Next &rarr;',
+        showCancelButton: true,
+        cancelButtonColor: '#FF586B',
+        animation: false
     });
-    
-    var steps = [
-      {
-        title: 'Step 1',
-        text: 'Chaining modals is easy with Step 1'
-      },
-      {
-        title: 'Step 2',
-        text: 'Chaining modals is easy with Step 2'
-      },
-      {
-        title: 'Step 3',
-        text: 'Chaining modals is easy with Step 3'
-      },
+
+    let steps = [
+        {
+            title: 'Step 1',
+            text: 'Chaining modals is easy with Step 1'
+        },
+        {
+            title: 'Step 2',
+            text: 'Chaining modals is easy with Step 2'
+        },
+        {
+            title: 'Step 3',
+            text: 'Chaining modals is easy with Step 3'
+        },
     ];
-    
-    swal.queue(steps).then(function() {
-      swal({
-        title: 'All done!',
-        text: 'Great job :)',
-        confirmButtonText: 'Lovely!',
-        showCancelButton: false
-      });
-    }).then(function() {
-      swal.resetDefaults();
+
+    swal.queue(steps).then(function () {
+        swal({
+            title: 'All done!',
+            text: 'Great job :)',
+            confirmButtonText: 'Lovely!',
+            showCancelButton: false
+        });
+    }).then(function () {
+        swal.resetDefaults();
     }).catch(swal.noop);
 }

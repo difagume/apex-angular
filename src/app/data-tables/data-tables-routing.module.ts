@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { DTFullScreenComponent } from "./fullscreen/dt-fullscreen.component";
-import { DTEditingComponent } from "./editing/dt-editing.component";
-import { DTFilterComponent } from "./filter/dt-filter.component";
-import { DTPagingComponent } from "./paging/dt-paging.component";
-import { DTPinningComponent } from "./pinning/dt-pinning.component";
-import { DTSelectionComponent } from "./selection/dt-selection.component";
-import { DTSortingComponent } from "./sorting/dt-sorting.component";
-import { DTBasicComponent } from "./basic/dt-basic.component";
+import { DTFullScreenComponent } from './fullscreen/dt-fullscreen.component';
+import { DTEditingComponent } from './editing/dt-editing.component';
+import { DTFilterComponent } from './filter/dt-filter.component';
+import { DTPagingComponent } from './paging/dt-paging.component';
+import { DTPinningComponent } from './pinning/dt-pinning.component';
+import { DTSelectionComponent } from './selection/dt-selection.component';
+import { DTSortingComponent } from './sorting/dt-sorting.component';
+import { DTBasicComponent } from './basic/dt-basic.component';
 
 const routes: Routes = [
   {

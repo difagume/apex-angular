@@ -114,5 +114,5 @@ export class TaskBoardService {
     }
     gettodo() {
         return this.todo;
-      }
+    }
 }
